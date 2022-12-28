@@ -11,6 +11,8 @@ java -jar target/*.jar
 # or u can perform 
 ./mvnw spring-boot:run
 ```
+## Change port if required
+* We can use this command to change the port of the spring boot during execution `java -jar spring.jar --server.port=80`
 
 You can then access petclinic here: http://localhost:8080/
 
