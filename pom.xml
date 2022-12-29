@@ -28,23 +28,19 @@
     <spring-format.version>0.0.31</spring-format.version>
 
   </properties>
-<dependencyManagement>
+    <!-- Add Spring Cloud GCP Dependency BOM -->
+    <dependencyManagement>
+        <dependencies>
+          <dependency>
+          <groupId>com.google.cloud</groupId>
+          <artifactId>spring-cloud-gcp-dependencies</artifactId>
+          <version>3.3.0</version>
+          <type>pom</type>
+          <scope>import</scope>
+          </dependency>
+      </dependencies>
+    </dependencyManagement>
     <dependencies>
-        <dependency>
-        <groupId>com.google.cloud</groupId>
-        <artifactId>spring-cloud-gcp-dependencies</artifactId>
-        <version>3.3.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
-  <dependencies>
-      <!-- Add CloudSQL Starter for MySQL -->
-      <dependency>
-        <groupId>com.google.cloud</groupId>
-        <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
-      </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
